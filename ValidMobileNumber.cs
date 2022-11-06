@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationRegex
 {
-    public class ValidEmail
+    public class ValidMobileNumber
     {
         public static string User_FirstName = "^[A-Z]{1}[a-z]{2,}$";
         public bool FirstName(string firstName)
@@ -25,6 +25,12 @@ namespace UserRegistrationRegex
         public bool EmailId(string emailId)
         {
             return Regex.IsMatch(emailId, User_EmailId);
+        }
+
+        public static string User_MobileNumber = "^[0-9]{2}[0-9]{10}";
+        public bool MobileNumber(string mobileNumber)
+        {
+            return Regex.IsMatch(mobileNumber, User_MobileNumber);
         }
     }
 }
