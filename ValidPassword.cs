@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationRegex
 {
-    public class ValidMobileNumber
+    public class ValidPassword
     {
         public static string User_FirstName = "^[A-Z]{1}[a-z]{2,}$";
         public bool FirstName(string firstName)
@@ -31,6 +31,12 @@ namespace UserRegistrationRegex
         public bool MobileNumber(string mobileNumber)
         {
             return Regex.IsMatch(mobileNumber, User_MobileNumber);
+        }
+
+        public static string User_PasswordRule1 = "^[a-zA-z0-9]{8,16}$";
+        public bool Password(string password)
+        {
+            return Regex.IsMatch(password, User_PasswordRule1);
         }
     }
 }

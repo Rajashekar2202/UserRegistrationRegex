@@ -24,6 +24,10 @@
             ValidMobileNumber d = new ValidMobileNumber();
             bool val3 = d.MobileNumber(mobileNumber);
 
+            Console.WriteLine("Enter Password");
+            string password = Console.ReadLine();
+            ValidPassword e = new ValidPassword();
+            bool val4 = e.Password(password);
 
             if (val)
             {
@@ -61,6 +65,14 @@
                 Console.WriteLine("Invalid MobilNumber");
             }
 
+            if (val4)
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Passward");
+            }
         }
     }
 }
