@@ -33,10 +33,10 @@ namespace UserRegistrationRegex
             return Regex.IsMatch(mobileNumber, User_MobileNumber);
         }
 
-        public static string User_PasswordRule2 = "(?=.*[A-Z])(?=.[0-9a-z]{7,})";
+        public static string User_PasswordRule3 = "(?=.*[A-Z])(?=.[0-9a-z]{7,})";
         public bool Password(string password)
         {
-            return Regex.IsMatch(password, User_PasswordRule2);
+            return Regex.IsMatch(password, User_PasswordRule3);
         }
     }
 }
