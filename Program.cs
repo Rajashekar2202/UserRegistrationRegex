@@ -29,6 +29,11 @@
             ValidPassword e = new ValidPassword();
             bool val4 = e.Password(password);
 
+            Console.WriteLine("Enter Sample Email");
+            string email = Console.ReadLine();
+            ValidPassword f = new ValidPassword();
+            bool val5 = e.Email(email);
+
             if (val)
             {
                 Console.WriteLine("Valid FirstName");

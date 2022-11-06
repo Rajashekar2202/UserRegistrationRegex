@@ -38,5 +38,11 @@ namespace UserRegistrationRegex
         {
             return Regex.IsMatch(password, User_PasswordRule4);
         }
+        public static string User_EmailSample = "^[a-z][a-z0-9]{2}([-.+]{1}[a-z0-9]{3})?[@][a-z0-9]{1,}[.][a-z]{3}([.][a-z]{2,3})?$";
+
+        public bool Email(string email)
+        {
+            return Regex.IsMatch(email, User_EmailSample);
+        }
     }
 }
